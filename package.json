@@ -1,10 +1,7 @@
 {
-  "name": "Hugin",
+  "name": "Aesir",
   "version": "0.0.1",
   "private": true,
-  "bin": {
-    "hello-pear": "./bin/hello-pear.js"
-  },
   "scripts": {
     "android": "react-native run-android --active-arch-only",
     "ios": "react-native run-ios",
@@ -16,8 +13,6 @@
     "get-offline-lists": "wget https://raw.githubusercontent.com/kryptokrona/kryptokrona-public-nodes/master/nodes.json -O src/nodes.json && wget https://raw.githubusercontent.com/kryptokrona/hugin-groups/main/groups.json -O src/groups.json"
   },
   "dependencies": {
-    "@hyperswarm/dht": "^6.5.1",
-    "@hyperswarm/secret-stream": "^6.4.0",
     "@os-team/i18next-react-native-language-detector": "^1.0.33",
     "@react-native-async-storage/async-storage": "1.21.0",
     "@react-native-clipboard/clipboard": "^1.14.1",
@@ -28,29 +23,17 @@
     "@tradle/react-native-http": "^2.0.0",
     "assert": "^1.1.1",
     "asyncstorage-down": "^4.2.0",
-    "b4a": "^1.6.6",
-    "bare-console": "4.1.0",
-    "bare-fs": "2.3.1",
-    "bare-process": "1.3.2",
     "base-64": "^1.0.0",
     "browserify-zlib": "~0.1.4",
     "buffer": "^4.9.1",
     "commander": "^12.1.0",
     "compact-encoding": "^2.15.0",
     "console-browserify": "^1.1.0",
-    "expo": "^50.0.0",
     "fs": "^0.0.1-security",
     "https-browserify": "~0.0.0",
-    "hyperbeam": "3.0.2",
-    "hyperbee": "^2.19.6",
-    "hypercore": "^10.37.7",
-    "hyperdht": "6.15.1",
-    "hyperswarm": "4.7.14",
-    "hyperswarm-hugin": "^1.0.1",
     "i18next": "^23.11.5",
     "identicon.js": "^2.3.3",
     "int-encoder": "^1.1.1",
-    "keypear": "^1.2.2",
     "kryptokrona-wallet-backend-js": "^2.5.5",
     "moment": "^2.30.1",
     "patch-package": "^8.0.0",
@@ -88,12 +71,8 @@
     "react-native-vector-icons": "10.0.0",
     "readable-stream": "1.0.33",
     "request-promise-native": "^1.0.9",
-    "sodium-native": "^4.1.1",
     "stream-browserify": "^1.0.0",
     "tiny-buffer-rpc": "^2.1.0",
-    "tweetnacl": "^1.0.3",
-    "tweetnacl-sealed-box": "^1.0.5",
-    "tweetnacl-util": "^0.15.1",
     "unicode-emoji-json": "^0.6.0",
     "url": "~0.10.1",
     "vm-browserify": "0.0.4",
@@ -136,8 +115,7 @@
     "react-test-renderer": "18.2.0",
     "rn-nodeify": "^10.3.0",
     "typescript": "^5.3.0",
-    "typescript-eslint": "^7.8.0",
-    "which": "^4.0.0"
+    "typescript-eslint": "^7.8.0"
   },
   "engines": {
     "node": ">=18"
@@ -179,8 +157,5 @@
     "stream": "stream-browserify",
     "vm": "vm-browserify",
     "tls": false
-  },
-  "resolutions": {
-    "expo-modules-core": "1.11.13"
   }
 }

@@ -61,9 +61,6 @@ react {
     // hermesFlags = ["-O", "-output-source-map"]
     //
     // Added by install-expo-modules
-    entryFile = file(["node", "-e", "require('expo/scripts/resolveAppEntry')", rootDir.getAbsoluteFile().getParentFile().getAbsolutePath(), "android", "absolute"].execute(null, rootDir).text.trim())
-    cliFile = new File(["node", "--print", "require.resolve('@expo/cli')"].execute(null, rootDir).text.trim())
-    bundleCommand = "export:embed"
 }
 
 /**
@@ -87,12 +84,12 @@ def hermesEnabled = true
 android {
     ndkVersion rootProject.ext.ndkVersion
 
-    namespace 'com.hugin'
+    namespace 'com.aesir'
     defaultConfig {
         buildToolsVersion '34'
         targetSdkVersion '33'
         compileSdk 34
-        applicationId 'com.hugin'
+        applicationId 'com.aesir'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

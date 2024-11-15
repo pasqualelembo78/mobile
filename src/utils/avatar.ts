@@ -1,8 +1,4 @@
 import Identicon, { IdenticonOptions } from 'identicon.js';
-import {
-  ImageLibraryOptions,
-  launchImageLibrary,
-} from 'react-native-image-picker';
 
 function hashCode(str: string) {
   let hash = 0;
@@ -94,14 +90,14 @@ export const createAvatar = () => {
   return getAvatar(hash);
 };
 
-export const pickAvatar = async () => {
-  const options: ImageLibraryOptions = {
-    includeBase64: true,
-    mediaType: 'photo',
-    quality: 1,
-  };
-  const result = await launchImageLibrary(options);
-  const base64 = result.assets?.[0].base64;
+// export const pickAvatar = async () => {
+//   const options: ImageLibraryOptions = {
+//     includeBase64: true,
+//     mediaType: 'photo',
+//     quality: 1,
+//   };
+//   const result = await launchImageLibrary(options);
+//   const base64 = result.assets?.[0].base64;
 
-  return base64;
-};
+//   return base64;
+// };

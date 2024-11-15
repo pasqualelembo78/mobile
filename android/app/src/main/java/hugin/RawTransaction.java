@@ -1,4 +1,4 @@
-package com.hugin;
+package com.aesir;
 
 import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.bridge.ReadableMap;

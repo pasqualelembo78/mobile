@@ -1,7 +1,5 @@
-package com.hugin;
+package com.aesir;
 
-import expo.modules.ReactActivityDelegateWrapper;
-import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactActivity;
 // import com.rnfs.RNFSPackage;
 
@@ -66,6 +64,6 @@ public class MainActivity extends ReactActivity {
   // }
 
   protected String getMainComponentName() {
-    return "Hugin";
+    return "Aesir";
   }
 }

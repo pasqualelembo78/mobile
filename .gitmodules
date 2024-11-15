@@ -1,6 +1,0 @@
-[submodule "vendor/bare"]
-	path = vendor/bare
-	url = https://github.com/holepunchto/bare
-[submodule "vendor/concurrentqueue"]
-	path = vendor/concurrentqueue
-	url = https://github.com/cameron314/concurrentqueue/

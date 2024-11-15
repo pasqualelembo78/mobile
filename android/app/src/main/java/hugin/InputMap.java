@@ -1,4 +1,4 @@
-package com.hugin;
+package com.aesir;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.WritableArray;

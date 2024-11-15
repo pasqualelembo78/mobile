@@ -1,9 +1,7 @@
-package com.hugin;
+package com.aesir;
 import android.content.res.Configuration;
-import expo.modules.ApplicationLifecycleDispatcher;
-import expo.modules.ReactNativeHostWrapper;
 
-import com.hugin.BuildConfig;
+import com.aesir.BuildConfig;
 
 import android.app.Application;
 import android.content.Intent;
@@ -26,7 +24,7 @@ import okhttp3.Response;
 import okhttp3.Request;
 
 public class MainApplication extends Application implements ReactApplication {
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHostWrapper(this, new ReactNativeHost(this) {
+   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -42,10 +40,10 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected String getJSMainModuleName() {
-        return ".expo/.virtual-metro-entry";
+        return "index.js";
     }
 
-  });
+  };
 
   @Override
   public ReactNativeHost getReactNativeHost() {
@@ -57,10 +55,9 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
 
     /* tonchan-vx.x.x */
-    setUserAgent("hugin-messenger-v2.0.0");
+    setUserAgent("aesir-v1.0.0");
 
     SoLoader.init(this, /* native exopackage */ false);
-    ApplicationLifecycleDispatcher.onApplicationCreate(this);
   }
 
   public void setUserAgent(String userAgent) {
@@ -68,11 +65,6 @@ public class MainApplication extends Application implements ReactApplication {
   }
 
 
-  @Override
-  public void onConfigurationChanged(Configuration newConfig) {
-    super.onConfigurationChanged(newConfig);
-    ApplicationLifecycleDispatcher.onConfigurationChanged(this, newConfig);
-  }
 }
 
 class UserAgentInterceptor implements Interceptor {
