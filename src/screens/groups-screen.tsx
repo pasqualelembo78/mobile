@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import { FlatList, TouchableOpacity, View } from 'react-native';
 
 import { useNavigation, type RouteProp } from '@react-navigation/native';
+import { Daemon, WalletBackend } from 'kryptokrona-wallet-backend-js';
 import { useTranslation } from 'react-i18next';
 
 import {
@@ -16,13 +17,7 @@ import {
   TextField,
 } from '@/components';
 import { MainScreens } from '@/config';
-import {
-  joinAndSaveRoom,
-  setRoomMessages,
-  setStoreCurrentRoom,
-  useGlobalStore,
-  useUserStore,
-} from '@/services';
+import { setStoreCurrentRoom, useGlobalStore, useUserStore } from '@/services';
 import type { MainStackNavigationType, MainNavigationParamList } from '@/types';
 
 import { Header } from '../components/_navigation/header';
@@ -57,11 +52,18 @@ export const GroupsScreen: React.FC<Props> = () => {
   }, [navigation]);
 
   function onAddGroupPress() {
-    setModalVisible(true);
+    wallet();
   }
 
+  // Function to test wallet support for different JS engines
+  const wallet = async () => {
+    const daemon = new Daemon('privacymine.net', 11898);
+    const config = {};
+    const wallet = await WalletBackend.createWallet(daemon, config);
+    console.log('Wallet!', wallet);
+  };
+
   async function onPress(roomKey: string, name: string) {
-    await setRoomMessages(roomKey, 0);
     setStoreCurrentRoom(roomKey);
     navigation.navigate(MainScreens.GroupChatScreen, { name, roomKey });
   }
@@ -90,8 +92,6 @@ export const GroupsScreen: React.FC<Props> = () => {
     const roomName = parse.slice(0, parse.length - 1 - inviteKey.length);
 
     if (inviteKey && roomName && user?.address) {
-      joinAndSaveRoom(inviteKey, roomName, user.address, user?.name);
-
       setModalVisible(false);
 
       navigation.navigate(MainScreens.GroupChatScreen, {

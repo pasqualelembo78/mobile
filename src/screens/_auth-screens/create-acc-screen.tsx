@@ -16,7 +16,6 @@ import {
 } from '@/components';
 import { AuthScreens, MainScreens, Stacks, nameMaxLength } from '@/config';
 import {
-  createUserAddress,
   useGlobalStore,
   usePreferencesStore,
   useThemeStore,
@@ -25,7 +24,6 @@ import {
 import { AuthMethods, AuthStackNavigationType } from '@/types';
 
 import { Header } from '../../components/_navigation/header';
-import { initDB } from '../../services/bare/sqlite';
 
 export const CreateAccScreen: React.FC = () => {
   const { t } = useTranslation();
@@ -58,8 +56,8 @@ export const CreateAccScreen: React.FC = () => {
   async function onCreateProfile() {
     setLoading(true);
     // Save selected authentication method and pincode if applicable
-    await initDB();
-    const address = await createUserAddress();
+    // await initDB();
+    const address = 'lolll';
 
     useUserStore.setState((state) => ({
       ...state,
