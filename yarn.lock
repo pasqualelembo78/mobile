@@ -9884,6 +9884,11 @@
     "process" "^0.11.9"
     "util" "^0.10.3"
 
+"react-native-toast-message@^2.2.1":
+  "integrity" "sha512-iXFMnlxPcgKKs4bZOIl06W16m6KXMh/bAYpWLyVXlISSCdcL2+FX5WPpRP3TGQeM/u9q+j5ex48DDY+72en+Sw=="
+  "resolved" "https://registry.npmjs.org/react-native-toast-message/-/react-native-toast-message-2.2.1.tgz"
+  "version" "2.2.1"
+
 "react-native-udp@^4.1.7":
   "integrity" "sha512-NUE3zewu61NCdSsLlj+l0ad6qojcVEZPT4hVG/x6DU9U4iCzwtfZSASh9vm7teAcVzLkdD+cO3411LHshAi/wA=="
   "resolved" "https://registry.npmjs.org/react-native-udp/-/react-native-udp-4.1.7.tgz"

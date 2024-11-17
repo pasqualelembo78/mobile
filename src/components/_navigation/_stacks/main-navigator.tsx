@@ -8,6 +8,7 @@ import {
   ModifyGroupScreen,
   SettingsScreen,
   UpdateProfileScreen,
+  ReceiveScreen
 } from '@/screens';
 import { MainScreens, TabBar } from '@/config';
 
@@ -27,7 +28,15 @@ export const MainNavigator = () => {
         tabBarHideOnKeyboard: true,
       }}
       tabBar={(props) => <MyTabBar {...props} />}>
-      {/* // Groups */}
+      {/* // Wallet */}
+
+      <Tab.Screen
+        name={MainScreens.ReceiveScreen}
+        component={ReceiveScreen}
+        options={() => ({
+          header: (_props) => <Header title={t('receive')} />, // More actions handled in screen
+        })}
+      /> 
 
       <Tab.Screen
         name={MainScreens.MainScreen}

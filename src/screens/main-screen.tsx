@@ -2,7 +2,7 @@ import React, { useCallback, useState } from 'react';
 
 import { ScrollView, RefreshControl, Text, StyleSheet, View, FlatList } from 'react-native';
 
-import { ScreenLayout, TransactionChart, TransactionItem } from '@/components';
+import { ScreenLayout, TransactionChart, TransactionItem, Separator } from '@/components';
 import { Transaction } from '@/types';
 import { t } from 'i18next';
 
@@ -108,8 +108,6 @@ export const MainScreen: React.FC = () => {
     return <TransactionItem {...item} />;
 
   }
-
-  const SeparatorLine = () => <View style={styles.separatorline} />;
 
 
   const balance = 133742069;
@@ -245,7 +243,7 @@ export const MainScreen: React.FC = () => {
               data={transactions}
               renderItem={transactionsCB}
               keyExtractor={(item, i) => `${item.hash}-${i}`}
-              ItemSeparatorComponent={SeparatorLine}
+              ItemSeparatorComponent={Separator}
             />
           ) : (
             <Text style={styles.noTransactions}>{t('noTransactions')}</Text>
@@ -258,11 +256,7 @@ export const MainScreen: React.FC = () => {
 };
 
 const styles = StyleSheet.create({
-  separatorline: {
-    height: 1,
-    backgroundColor: 'rgba(255,255,255,0.1)', // Separator style
-  },
-  balance: {
+ balance: {
     color: 'white',
     fontSize: 20,
     fontWeight: 'bold',

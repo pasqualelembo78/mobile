@@ -10,4 +10,8 @@ export * from './sync';
 export * from './user-item';
 export * from './transaction';
 export * from './graph';
+export * from './separator';
+export * from './address-item';
+
+
 

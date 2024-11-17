@@ -9,6 +9,8 @@ import {
   View,
 } from 'react-native';
 
+import Toast from 'react-native-toast-message'; 
+
 import { useHeaderHeight } from '@react-navigation/elements';
 
 import { useThemeStore } from '@/services';
@@ -50,6 +52,7 @@ export const ScreenLayout: React.FC<Props> = ({
           keyboardVerticalOffset={height}>
           <View style={styles.innerView}>{children}</View>
         </KeyboardAvoidingView>
+        <Toast />
       </View>
     </TouchableWithoutFeedback>
   );

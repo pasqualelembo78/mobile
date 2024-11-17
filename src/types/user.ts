@@ -48,3 +48,8 @@ export interface Transaction {
   hash: string;
   amount: number;
 }
+
+export interface Address {
+  address: string;
+  balance: number;
+}
