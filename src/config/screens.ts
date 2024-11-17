@@ -8,6 +8,11 @@ export enum AuthScreens {
 }
 
 export const TabBar = {
+  HistoryScreen: {
+    iconName: 'list-ul',
+    iconType: 'FA5',
+    tabName: 'MainTab',
+  },
   ReceiveScreen: {
     iconName: 'arrow-down-circle',
     iconType: 'FI',
@@ -60,4 +65,5 @@ export enum MainScreens {
   FaqScreen = 'FaqScreen',
   SettingsScreen = 'SettingsScreen',
   UpdateProfileScreen = 'UpdateProfileScreen',
+  HistoryScreen = 'HistoryScreen'
 }

@@ -16,3 +16,4 @@ export * from './transfer-screen';
 export * from './update-profile-screen';
 export * from './receive-screen';
 export * from './send-screen';
+export * from './history-screen';

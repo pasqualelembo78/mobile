@@ -9,7 +9,8 @@ import {
   SettingsScreen,
   UpdateProfileScreen,
   ReceiveScreen,
-  SendScreen
+  SendScreen,
+  HistoryScreen
 } from '@/screens';
 import { MainScreens, TabBar } from '@/config';
 
@@ -44,6 +45,14 @@ export const MainNavigator = () => {
         component={ReceiveScreen}
         options={() => ({
           header: (_props) => <Header title={t('receive')} />, // More actions handled in screen
+        })}
+      /> 
+
+      <Tab.Screen
+        name={MainScreens.HistoryScreen}
+        component={HistoryScreen}
+        options={() => ({
+          header: (_props) => <Header title={t('history')} />, // More actions handled in screen
         })}
       /> 
 
