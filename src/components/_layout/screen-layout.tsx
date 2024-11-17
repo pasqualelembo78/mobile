@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   innerView: {
     flexGrow: 1,
     gap: 8,
-    paddingHorizontal: 12,
+    paddingHorizontal: 0,
     paddingTop: 20,
     paddingVertical: 4,
   },

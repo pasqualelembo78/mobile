@@ -43,3 +43,8 @@ export interface PeerUser {
   room: string;
   key: string;
 }
+
+export interface Transaction {
+  hash: string;
+  amount: number;
+}

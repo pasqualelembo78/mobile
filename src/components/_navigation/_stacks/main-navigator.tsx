@@ -4,6 +4,7 @@ import {
   ChangeThemeScreen,
   GroupChatScreen,
   GroupsScreen,
+  MainScreen,
   ModifyGroupScreen,
   SettingsScreen,
   UpdateProfileScreen,
@@ -29,41 +30,14 @@ export const MainNavigator = () => {
       {/* // Groups */}
 
       <Tab.Screen
-        name={MainScreens.GroupsScreen}
-        component={GroupsScreen}
+        name={MainScreens.MainScreen}
+        component={MainScreen}
         options={() => ({
-          header: (_props) => <Header title={t('rooms')} />, // More actions handled in screen
-        })}
-      />
-      <Tab.Screen
-        name={MainScreens.AddGroupScreen}
-        component={AddGroupScreen}
-        options={() => ({
-          header: (_props) => <Header backButton title={t('subscribe')} />,
-        })}
-      />
-      <Tab.Screen
-        name={MainScreens.GroupChatScreen}
-        component={GroupChatScreen}
-        options={() => ({
-          header: (_props) => (
-            <Header
-              // Is set in screen
-              title={'Untitled'}
-              backButton
-            />
-          ),
-        })}
-      />
-      <Tab.Screen
-        name={MainScreens.ModifyGroupScreen}
-        component={ModifyGroupScreen}
-        options={() => ({
-          header: (_props) => <Header backButton title={t('modify')} />,
+          header: (_props) => <Header title={t('dashboard')} />, // More actions handled in screen
         })}
       />
 
-      {/* // Settings */}
+      {/* // Settings */}r
 
       <Tab.Screen
         name={MainScreens.SettingsScreen}

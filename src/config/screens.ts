@@ -8,6 +8,11 @@ export enum AuthScreens {
 }
 
 export const TabBar = {
+  MainScreen: {
+    iconName: 'view-dashboard',
+    iconType: 'MCI',
+    tabName: 'MainTab',
+  },
   GroupsScreen: {
     iconName: 'comment-text-multiple-outline',
     iconType: 'MCI',
@@ -31,6 +36,7 @@ export enum Stacks {
 }
 
 export enum MainScreens {
+  MainScreen = 'MainScreen',
   AddGroupScreen = 'AddGroupScreen',
   GroupChatScreen = 'GroupChatScreen',
   GroupsScreen = 'GroupsScreen',
