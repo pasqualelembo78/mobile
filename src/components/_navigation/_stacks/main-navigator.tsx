@@ -31,20 +31,20 @@ export const MainNavigator = () => {
       {/* // Wallet */}
 
       <Tab.Screen
-        name={MainScreens.ReceiveScreen}
-        component={ReceiveScreen}
-        options={() => ({
-          header: (_props) => <Header title={t('receive')} />, // More actions handled in screen
-        })}
-      /> 
-
-      <Tab.Screen
         name={MainScreens.MainScreen}
         component={MainScreen}
         options={() => ({
           header: (_props) => <Header title={t('dashboard')} />, // More actions handled in screen
         })}
       />
+
+<Tab.Screen
+        name={MainScreens.ReceiveScreen}
+        component={ReceiveScreen}
+        options={() => ({
+          header: (_props) => <Header title={t('receive')} />, // More actions handled in screen
+        })}
+      /> 
 
       {/* // Settings */}
 
