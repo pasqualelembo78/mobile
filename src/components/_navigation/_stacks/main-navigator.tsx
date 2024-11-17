@@ -37,7 +37,7 @@ export const MainNavigator = () => {
         })}
       />
 
-      {/* // Settings */}r
+      {/* // Settings */}
 
       <Tab.Screen
         name={MainScreens.SettingsScreen}
