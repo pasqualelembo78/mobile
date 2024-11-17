@@ -15,3 +15,4 @@ export * from './transaction-screen';
 export * from './transfer-screen';
 export * from './update-profile-screen';
 export * from './receive-screen';
+export * from './send-screen';

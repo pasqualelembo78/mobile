@@ -9,8 +9,13 @@ export enum AuthScreens {
 
 export const TabBar = {
   ReceiveScreen: {
-    iconName: 'qr-code',
-    iconType: 'IO',
+    iconName: 'arrow-down-circle',
+    iconType: 'FI',
+    tabName: 'MainTab',
+  },
+  SendScreen: {
+    iconName: 'arrow-up-circle',
+    iconType: 'FI',
     tabName: 'MainTab',
   },
   MainScreen: {
@@ -43,6 +48,7 @@ export enum Stacks {
 export enum MainScreens {
   MainScreen = 'MainScreen',
   ReceiveScreen = 'ReceiveScreen',
+  SendScreen = 'SendScreen',
   AddGroupScreen = 'AddGroupScreen',
   GroupChatScreen = 'GroupChatScreen',
   GroupsScreen = 'GroupsScreen',

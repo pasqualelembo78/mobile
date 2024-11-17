@@ -8,7 +8,8 @@ import {
   ModifyGroupScreen,
   SettingsScreen,
   UpdateProfileScreen,
-  ReceiveScreen
+  ReceiveScreen,
+  SendScreen
 } from '@/screens';
 import { MainScreens, TabBar } from '@/config';
 
@@ -38,13 +39,21 @@ export const MainNavigator = () => {
         })}
       />
 
-<Tab.Screen
+      <Tab.Screen
         name={MainScreens.ReceiveScreen}
         component={ReceiveScreen}
         options={() => ({
           header: (_props) => <Header title={t('receive')} />, // More actions handled in screen
         })}
       /> 
+
+      <Tab.Screen
+        name={MainScreens.SendScreen}
+        component={SendScreen}
+        options={() => ({
+          header: (_props) => <Header title={t('send')} />, // More actions handled in screen
+        })}
+      />
 
       {/* // Settings */}
 
