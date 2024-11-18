@@ -6,29 +6,26 @@
 // Please see the included LICENSE file for more information.
 
 #include "crypto.h"
-#include "TurtleCoin.h"
+#include "kryptokrona.h"
 #include "StringTools.h"
 
 /* IOS functions for export to Obj C module */
 
 std::vector<std::tuple<Crypto::PublicKey, TransactionInput>> processBlockOutputsIOS(
-    WalletBlockInfo walletBlockInfo,
-    Crypto::SecretKey privateViewKey,
-    std::unordered_map<Crypto::PublicKey, Crypto::SecretKey> spendKeys,
-    bool isViewWallet,
-    bool processCoinbaseTransactions)
+    const WalletBlockInfo walletBlockInfo,
+    const std::string privateViewKey,
+    const std::unordered_map<Crypto::PublicKey, Crypto::SecretKey> spendKeys,
+    const bool isViewWallet,
+    const bool processCoinbaseTransactions)
 {
-    // Convert values from Hex -> pod here or in .mm module?
-
     const auto inputs = processBlockOutputs(
         walletBlockInfo, privateViewKey, spendKeys, isViewWallet,
         processCoinbaseTransactions);
 
-    // TODO** convert pubkeys and txinput to strings etc
     return inputs;
 }
 
-std::string cn_fast_hash(const std::string input)
+std::string cn_fast_hash_IOS(const std::string input)
 {
     Crypto::Hash hash = Crypto::Hash();
 
@@ -57,7 +54,7 @@ bool generateRingSignaturesIOS(
 
     std::vector<Crypto::PublicKey> l_publicKeys;
 
-    toTypedVector(publicKeys, l_publicKeys);
+    Crypto::toTypedVector(publicKeys, l_publicKeys);
 
     Crypto::SecretKey l_transactionSecretKey;
 
@@ -65,12 +62,12 @@ bool generateRingSignaturesIOS(
 
     std::vector<Crypto::Signature> l_signatures;
 
-    bool success = Crypto::crypto_ops::generateRingSignatures(
-        l_prefixHash, l_keyImage, l_publicKeys, l_transactionSecretKey, realOutput, l_signatures);
+    bool success = Crypto:: : generateRingSignatures(
+                                  l_prefixHash, l_keyImage, l_publicKeys, l_transactionSecretKey, realOutput, l_signatures);
 
     if (success)
     {
-        toStringVector(l_signatures, signatures);
+        Crypto::toStringVector(l_signatures, signatures);
     }
 
     return success;
@@ -92,13 +89,13 @@ bool checkRingSignatureIOS(
 
     std::vector<Crypto::PublicKey> l_publicKeys;
 
-    toTypedVector(publicKeys, l_publicKeys);
+    Crypto::toTypedVector(publicKeys, l_publicKeys);
 
     std::vector<Crypto::Signature> l_signatures;
 
-    toTypedVector(signatures, l_signatures);
+    Crypto::toTypedVector(signatures, l_signatures);
 
-    return Crypto::crypto_ops::checkRingSignature(l_prefixHash, l_keyImage, l_publicKeys, l_signatures);
+    return Crypto::checkRingSignature(l_prefixHash, l_keyImage, l_publicKeys, l_signatures);
 }
 
 bool generateKeyDerivationIOS(
@@ -141,7 +138,7 @@ std::string generateKeyImageIOS(const std::string publicKey, const std::string p
 
     return Common::podToHex(l_keyImage);
 }
-std::string Cryptography::deriveSecretKeyIOS(
+std::string deriveSecretKeyIOS(
     const std::string &derivation,
     const uint64_t outputIndex,
     const std::string &privateKey)

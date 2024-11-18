@@ -34,13 +34,14 @@ bool generateKeyDerivationIOS(
     const std::string publicKey,
     const std::string privateKey,
     std::string &derivation);
+
 std::string generateKeyImageIOS(const std::string publicKey, const std::string privateKey);
 
-std::string Cryptography::deriveSecretKeyIOS(
+std::string deriveSecretKeyIOS(
     const std::string &derivation,
     const uint64_t outputIndex,
     const std::string &privateKey);
 inline int
 derivePublicKeyIOS(const char *derivation, const uint64_t outputIndex, const char *publicKey, char *&outPublicKey)
 
-    std::string cn_fast_hash(const std::string input)
+    std::string cn_fast_hash_IOS(const std::string input)
