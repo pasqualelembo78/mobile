@@ -62,8 +62,8 @@ bool generateRingSignaturesIOS(
 
     std::vector<Crypto::Signature> l_signatures;
 
-    bool success = Crypto:: : generateRingSignatures(
-                                  l_prefixHash, l_keyImage, l_publicKeys, l_transactionSecretKey, realOutput, l_signatures);
+    bool success = Crypto::generateRingSignatures(
+        l_prefixHash, l_keyImage, l_publicKeys, l_transactionSecretKey, realOutput, l_signatures);
 
     if (success)
     {
