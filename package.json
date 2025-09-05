@@ -10,7 +10,7 @@
     "test": "jest",
     "patch": "patch-package",
     "postinstall": "rn-nodeify --install fs,dgram,process,path,console,crypto,buffer,stream,vm,http,https,url,zlib,net,assert,tls --hack --yarn; npx jetifier",
-    "get-offline-lists": "wget https://raw.githubusercontent.com/kryptokrona/kryptokrona-public-nodes/master/nodes.json -O src/nodes.json && wget https://raw.githubusercontent.com/kryptokrona/hugin-groups/main/groups.json -O src/groups.json"
+    "get-offline-lists": "wget https://raw.githubusercontent.com/mevacoin/mevacoin-public-nodes/master/nodes.json -O src/nodes.json && wget https://raw.githubusercontent.com/mevacoin/hugin-groups/main/groups.json -O src/groups.json"
   },
   "dependencies": {
     "@os-team/i18next-react-native-language-detector": "^1.0.33",
@@ -35,8 +35,9 @@
     "i18next": "^23.11.5",
     "identicon.js": "^2.3.3",
     "int-encoder": "^1.1.1",
-    "mevacoin-backend-wallet": "^1.0.0"
+    "mevacoin-backend-wallet": "2.0.0",
     "moment": "^2.30.1",
+    "patch": "^0.0.1",
     "patch-package": "^8.0.0",
     "path-browserify": "0.0.0",
     "process": "^0.11.0",

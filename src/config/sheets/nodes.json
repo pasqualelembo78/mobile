@@ -2,7 +2,7 @@
   "nodes": [
     {
       "name": "Göta Pool",
-      "url": "gota.kryptokrona.se",
+      "url": "gota.mevacoin.se",
       "port": 11898,
       "ssl": false,
       "cache": false,
@@ -132,7 +132,7 @@
     },
     {
       "name": "Wasa",
-      "url": "wasa.kryptokrona.se",
+      "url": "wasa.mevacoin.se",
       "port": 11898,
       "ssl": false,
       "cache": false,

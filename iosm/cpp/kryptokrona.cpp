@@ -6,7 +6,7 @@
 // Please see the included LICENSE file for more information.
 
 #include "crypto.h"
-#include "kryptokrona.h"
+#include "mevacoin.h"
 #include "StringTools.h"
 
 /* IOS functions for export to Obj C module */

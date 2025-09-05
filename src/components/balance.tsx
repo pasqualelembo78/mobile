@@ -8,7 +8,7 @@
 
 // import { StyleSheet, View, Text, Linking, Button } from 'react-native';
 
-// import { prettyPrintAmount } from 'kryptokrona-wallet-backend-js';
+// import { prettyPrintAmount } from 'mevacoin-backend-wallet';
 // import { useTranslation } from 'react-i18next';
 
 // import { prettyPrintAmountMainScreen, useGlobalStore } from '@/services';
@@ -37,7 +37,7 @@
 
 //   const handlePress = useCallback(async () => {
 //     await Linking.openURL(
-//       `https://kryptokrona.org/en/faucet?address=${props.address}`,
+//       `https://mevacoin.org/en/faucet?address=${props.address}`,
 //     );
 //   }, [address]);
 

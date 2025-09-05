@@ -3,7 +3,7 @@ import React, { useLayoutEffect, useState } from 'react';
 import { FlatList, TouchableOpacity, View } from 'react-native';
 
 import { useNavigation, type RouteProp } from '@react-navigation/native';
-import { Daemon, WalletBackend } from 'kryptokrona-wallet-backend-js';
+import { Daemon, WalletBackend } from 'mevacoin-backend-wallet';
 import { useTranslation } from 'react-i18next';
 
 import {

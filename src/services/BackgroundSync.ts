@@ -5,7 +5,7 @@
 // import { AppState, Platform, PushNotificationIOS } from 'react-native';
 
 // import NetInfo from '@react-native-community/netinfo';
-// import { WalletBackend, LogLevel } from 'kryptokrona-wallet-backend-js';
+// import { WalletBackend, LogLevel } from 'mevacoin-backend-wallet';
 // import PushNotification from 'react-native-push-notification';
 
 // import { config, globals } from '@/config';

@@ -15,7 +15,7 @@
 //   validateAddresses,
 //   WalletErrorCode,
 //   validatePaymentID,
-// } from 'kryptokrona-wallet-backend-js';
+// } from 'mevacoin-backend-wallet';
 // import Qs from 'query-string';
 
 // import { config, globals } from '@/config';

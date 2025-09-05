@@ -7,7 +7,7 @@
 // import { Alert, Platform } from 'react-native';
 
 // import NetInfo from '@react-native-community/netinfo';
-// import { Daemon } from 'kryptokrona-wallet-backend-js';
+// import { Daemon } from 'mevacoin-backend-wallet';
 // import _ from 'lodash';
 // import { PushNotificationObject } from 'react-native-push-notification';
 // import request from 'request-promise-native';

@@ -62,7 +62,7 @@
         },
         {
             "name": "XKR Dutch Pool",
-            "url": "kryptokrona.kalf.org",
+            "url": "mevacoin.kalf.org",
             "port": 11898,
             "ssl": false,
             "cache": false,
@@ -72,7 +72,7 @@
         },
         {
             "name": "Wasa",
-            "url": "wasa.kryptokrona.se",
+            "url": "wasa.mevacoin.se",
             "port": 11898,
             "ssl": false,
             "cache": false,
@@ -112,13 +112,13 @@
         },
 	{
             "name": "Kryptokrona.no",
-            "url": "node.kryptokrona.no",
+            "url": "node.mevacoin.no",
             "port": 11898,
             "ssl": false,
             "cache": false,
             "version": "1.1.1",
             "fee": "0.0",
-            "proxy_url": "kryptokronano"
+            "proxy_url": "mevacoinno"
         },
 	{
             "name": "KTH Node",

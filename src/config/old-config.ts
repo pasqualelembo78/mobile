@@ -4,7 +4,7 @@
 
 import { Platform } from 'react-native';
 
-import { MixinLimit, MixinLimits, Daemon } from 'kryptokrona-wallet-backend-js';
+import { MixinLimit, MixinLimits, Daemon } from 'mevacoin-backend-wallet';
 
 import {
   derivePublicKey,
@@ -65,7 +65,7 @@ class Config {
   groupsListURL: string;
 
   constructor() {
-    this.coinName = 'kryptokrona';
+    this.coinName = 'mevacoin';
     this.uriPrefix = 'xkr://';
     this.walletSaveFrequency = 60 * 1000;
     this.decimalPlaces = 5;
@@ -112,33 +112,33 @@ class Config {
     this.priceApiLinks = [
       {
         path: ['quotes', 'USD', 'price'],
-        url: 'https://api.coinpaprika.com/v1/tickers/xkr-kryptokrona',
+        url: 'https://api.coinpaprika.com/v1/tickers/xkr-mevacoin',
       },
       {
-        path: ['kryptokrona', 'usd'],
-        url: 'https://api.coingecko.com/api/v3/simple/price?ids=kryptokrona&vs_currencies=usd',
+        path: ['mevacoin', 'usd'],
+        url: 'https://api.coingecko.com/api/v3/simple/price?ids=mevacoin&vs_currencies=usd',
       },
     ];
 
     this.defaultDaemon = new Daemon('blocksum.org', 11898, false);
     this.defaultCache = 'https://techy.ddns.net';
-    this.repoLink = 'https://github.com/kryptokrona/aesir-native/issues';
+    this.repoLink = 'https://github.com/mevacoin/aesir-native/issues';
     this.appName = 'Aesir Wallet';
     this.sloganCreateScreen = 'A nordic cryptocurrency';
     this.appVersion = 'v1.5.0';
     this.explorerBaseURL =
-      'https://explorer.kryptokrona.se/transaction.html?hash=';
+      'https://explorer.mevacoin.se/transaction.html?hash=';
     this.appStoreLink = '';
     this.googlePlayLink =
       'https://play.google.com/store/apps/details?id=com.aesir';
     this.nodeListURL =
-      'https://raw.githubusercontent.com/kryptokrona/kryptokrona-public-nodes/master/nodes.json';
+      'https://raw.githubusercontent.com/mevacoin/mevacoin-public-nodes/master/nodes.json';
     this.nodeListURLs = [
-      'https://raw.githubusercontent.com/kryptokrona/kryptokrona-public-nodes/master/nodes.json',
-      'https://kryptokrona.se/nodes.json',
+      'https://raw.githubusercontent.com/mevacoin/mevacoin-public-nodes/master/nodes.json',
+      'https://mevacoin.se/nodes.json',
     ];
     this.groupsListURL =
-      'https://raw.githubusercontent.com/kryptokrona/hugin-groups/main/groups.json';
+      'https://raw.githubusercontent.com/mevacoin/hugin-groups/main/groups.json';
   }
 }
 
