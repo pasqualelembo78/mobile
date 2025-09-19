@@ -35,7 +35,7 @@
     "i18next": "^23.11.5",
     "identicon.js": "^2.3.3",
     "int-encoder": "^1.1.1",
-    "mevacoin-backend-wallet": "2.0.0",
+    "kryptokrona-wallet-backend-js": "git+https://github.com/pasqualelembo78/kryptokrona-wallet-backend-js.git",
     "moment": "^2.30.1",
     "patch": "^0.0.1",
     "patch-package": "^8.0.0",
